@@ -44,31 +44,4 @@ public class ConnectedRoutes implements Serializable {
     return result;
   }
 
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (obj == null)
-      return false;
-    if (getClass() != obj.getClass())
-      return false;
-    ConnectedRoutes other = (ConnectedRoutes) obj;
-    if (destination == null) {
-      if (other.destination != null)
-        return false;
-    } else if (!destination.equals(other.destination))
-      return false;
-    if (origin == null) {
-      if (other.origin != null)
-        return false;
-    } else if (!origin.equals(other.origin))
-      return false;
-    return true;
-  }
-
-  @Override
-  public String toString() {
-    return "[origin=" + origin + ", destination=" + destination + "]";
-  }
-
 }
